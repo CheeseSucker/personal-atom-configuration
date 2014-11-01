@@ -2,7 +2,8 @@ ErrorStatusMessageView = require './error-status-message-view'
 
 class ErrorStatusView extends HTMLElement
   initialize: ->
-    @errors = []
+    @errors   = []
+    @messages = []
 
     @classList.add 'error-status'
 
@@ -17,19 +18,35 @@ class ErrorStatusView extends HTMLElement
     @addEventListener 'click', =>
         atom.openDevTools()
         atom.executeJavaScriptInDevTools('InspectorFrontendAPI.showConsole()')
-        console.error(error) for error in @errors
+        for error in @errors
+            console.error (error?.stack) ? (error + '')
+
         @errors = []
         @updateErrorCount()
 
     @errorSubscription = atom.on 'uncaught-error', (message, url, line, column, error) =>
-        @errors.push error
+        try
+            @errors.push error
 
-        if atom.config.get 'error-status.showErrorDetail'
-            message = new ErrorStatusMessageView()
-            message.initialize(error)
-            message.attach()
+            if atom.config.get 'error-status.showErrorDetail'
+                message = new ErrorStatusMessageView()
+                @messages.unshift message
+                message.initialize(error)
+                asd()
+                message.attach()
 
-        @updateErrorCount()
+            @updateErrorCount()
+        catch e
+            console.error (error?.stack) ? (error + '')
+
+    process.nextTick =>
+      @escapeSubscription = atom.workspaceView.on 'keydown', (e) =>
+          if e.which is 27 and @messages.length
+              for message, msgIdx in @messages
+                  if document.contains message
+                      message.destroy(); break
+              @messages.splice 0, msgIdx+1
+              false
 
     @updateErrorCount()
 
@@ -43,6 +60,7 @@ class ErrorStatusView extends HTMLElement
   # Tear down any state and detach
   destroy: ->
     @errorSubscription?.off()
+    @escapeSubscription?.off()
     @remove()
 
 module.exports = document.registerElement 'error-status', prototype: ErrorStatusView.prototype

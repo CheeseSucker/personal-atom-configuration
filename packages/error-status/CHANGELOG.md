@@ -1,3 +1,23 @@
+## 0.1.10
+* Prevent the error handler from throwing.
+
+## 0.1.9
+* Press escape to close the error panel.
+* The 'more' link no longer shows if there is no more information.
+
+## 0.1.8
+* bug-report integration now sends markdown formatted error information.
+
+## 0.1.7
+* Style adjustments
+
+## 0.1.6
+* Added a copy to clipboard button
+
+## 0.1.5
+* Added integration with the [bug-report](https://github.com/lee-dohm/bug-report) package. If installed, error messages will gain a "Report" button that opens a new bug report.
+* Adjusted console output
+
 ## 0.1.3
 * Adjust panel background colour to work better on both light and dark themes
 

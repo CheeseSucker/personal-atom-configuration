@@ -1,31 +1,67 @@
 class ErrorStatusMessageView extends HTMLElement
 	initialize: (@error) ->
+		errorMessage = @error + ''
+		errorDetail = @error?.stack
+
 		@classList.add 'tool-panel', 'panel-bottom', 'padded'
-		@textContent = @error.toString()
+		@textContent = errorMessage
 
-		@expandButton = document.createElement 'span'
-		@expandButton.classList.add 'error-expand'
-		@expandButton.addEventListener 'click', =>
-			if @classList.contains 'expanded'
-				@classList.remove 'expanded'
-				@expandButton.textContent = '(more...)'
-			else
-				@classList.add 'expanded'
-				@expandButton.textContent = '(less...)'
-		@expandButton.textContent = '(more...)'
-
-		@removeButton = document.createElement 'span'
-		@removeButton.classList.add 'pull-right', 'icon', 'icon-x'
+		@removeButton = @createIconButton 'x'
 		@removeButton.addEventListener 'click', =>
 			@destroy()
 
-		@expanded = document.createElement 'div'
-		@expanded.classList.add 'inset-panel', 'padded'
-		@expanded.textContent = error.stack ? 'No stacktrace available.'
+		@clipboardButton = @createIconButton 'clippy'
+		@clipboardButton.addEventListener 'click', =>
+			atom.clipboard.write errorDetail
 
-		@appendChild @expandButton
-		@appendChild @removeButton
-		@appendChild @expanded
+		btnGroup = document.createElement 'div'
+		btnGroup.classList.add 'btn-group', 'pull-right'
+
+		if atom.packages.isPackageLoaded('bug-report')
+			@reportButton = @createIconButton 'issue-opened'
+			@reportButton.appendChild document.createTextNode ' Report'
+			@reportButton.addEventListener 'click', (e) =>
+				info = "## Error\n\n```\n#{errorDetail ? errorMessage}\n```"
+				atom.workspaceView.trigger 'bug-report:open', info
+
+				if atom.config.get 'error-status.closeOnReport'
+					@destroy()
+
+			btnGroup.appendChild @reportButton
+
+		btnGroup.appendChild @clipboardButton
+		btnGroup.appendChild @removeButton
+
+		@appendChild btnGroup
+
+		if errorDetail
+			@expandButton = document.createElement 'span'
+			@expandButton.classList.add 'error-expand'
+			@expandButton.addEventListener 'click', =>
+				if @classList.contains 'expanded'
+					@classList.remove 'expanded'
+					@expandButton.textContent = '(more...)'
+				else
+					@classList.add 'expanded'
+					@expandButton.textContent = '(less...)'
+
+			@expandButton.textContent = '(more...)'
+
+			@expanded = document.createElement 'div'
+			@expanded.classList.add 'inset-panel', 'padded'
+			@expanded.textContent = errorDetail
+
+			@appendChild @expandButton
+			@appendChild @expanded
+
+	createIconButton: (iconName) ->
+		icon = document.createElement 'span'
+		icon.classList.add 'icon', 'icon-' + iconName
+		button = document.createElement 'button'
+		button.classList.add 'btn', 'btn-sm'
+		button.appendChild icon
+
+		button
 
 	attach: ->
 		atom.workspaceView.prependToBottom this
