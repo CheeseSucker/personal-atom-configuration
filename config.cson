@@ -2,6 +2,7 @@
   'editor':
     'tabLength': 4
     'showIndentGuide': true
+    'invisibles': {}
   'core':
     'disabledPackages': [
       'language-gfm'
@@ -40,6 +41,12 @@
     'stylishHaskellPath': 'C:\\Users\\Hkn\\AppData\\Roaming\\cabal\\bin\\stylish-haskell.exe'
   'minimap':
     'autoToggle': false
+  'bracket-matcher':
+    'autocompleteSmartQuotes': false
+    'autocompleteBrackets': false
+  'atom-alignment': {}
+  'highlight-selected':
+    'hideHighlightOnSelectedWord': true
 '.js.rails.source source.jquery.js':
   'editor': {}
 '.haskell.latex.tex.text':
