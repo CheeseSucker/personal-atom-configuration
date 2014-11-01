@@ -26,3 +26,29 @@
 
 '.platform-linux, .platform-win32':
   'F5': 'build:trigger'
+
+'.workspace .editor':
+  'ctrl-alt-shift-f': 'ide-haskell:prettify-file'
+  'ctrl-0': 'window:reset-font-size'
+  'ctrl-shift-up': 'editor:add-selection-above'
+  'ctrl-shift-down': 'editor:add-selection-below'
+  'ctrl-d': 'editor:duplicate-lines'
+  'alt-down': 'editor:move-line-down'
+  'alt-up': 'editor:move-line-up'
+  'ctrl-up': 'editor:move-up'
+  'ctrl-down': 'editor:move-down'
+  'ctrl-alt-a': 'atom-alignment:align'
+  'ctrl-A': 'tabularize:toggle'
+  'ctrl-enter': 'find-and-replace:replace-all'
+  'ctrl-h': 'find-and-replace:show'
+
+'.workspace':
+  'ctrl-alt-shift-o': 'ide-haskell:toggle-output'
+
+'body':
+  # Reserved for virtual desktops
+  'ctrl-alt-up': 'native!'
+  'ctrl-alt-down': 'native!'
+  'ctrl-alt-down': 'native!'
+  'ctrl-alt-down': 'native!'
+  'ctrl-alt-shift-down': 'native!'
