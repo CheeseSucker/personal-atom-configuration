@@ -26,6 +26,7 @@
 
 '.platform-linux, .platform-win32':
   'F5': 'build:trigger'
+  'escape': 'build:stop'
 
 '.workspace .editor':
   'ctrl-alt-shift-f': 'ide-haskell:prettify-file'
@@ -41,6 +42,11 @@
   'ctrl-A': 'tabularize:toggle'
   'ctrl-enter': 'find-and-replace:replace-all'
   'ctrl-h': 'find-and-replace:show'
+  'ctrl-alt-shift-f': 'ide-haskell:prettify-file'
+  'ctrl-r': 'run-command:run'
+  'ctrl-alt-x': 'run-command:toggle-panel'
+  'ctrl-alt-shift-x': 'run-command:kill-last-command'
+  'ctrl-alt-r': 'run-command:re-run-last-command'
 
 '.workspace':
   'ctrl-alt-shift-o': 'ide-haskell:toggle-output'

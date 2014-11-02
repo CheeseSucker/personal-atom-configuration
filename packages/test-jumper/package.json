@@ -1,0 +1,46 @@
+{
+  "name": "test-jumper",
+  "main": "./lib/test-jumper",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Jump between your unit test and your code with a single hotkey",
+  "activationEvents": [
+    "test-jumper:toggle",
+    "test-jumper:jump"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielcooper/test-jumper"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# test-jumper for Atom\n\nFlick between your unit tests and your code with a hotkey [cmd-ctrl-.]\n\nBy default test jumper will work for projects where specs are defined by appending `-spec` to the end of a file and code is in either app/ or lib/. You can change this in the settings.\n\n![alt text](http://i.imgur.com/F2mM3MJ.gif \"Logo Title Text 1\")\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/danielcooper/test-jumper/issues"
+  },
+  "homepage": "https://github.com/danielcooper/test-jumper",
+  "_id": "test-jumper@0.2.0",
+  "dist": {
+    "shasum": "cc12b9c995a110e84413a8ca82817dbc9b3b3778"
+  },
+  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114102-5028-1abj586\\package.tgz",
+  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114102-5028-1abj586\\package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib\\test-jumper-leap.coffee",
+        "lib\\test-jumper.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
