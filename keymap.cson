@@ -46,7 +46,7 @@
   'ctrl-r': 'run-command:run'
   'ctrl-alt-x': 'run-command:toggle-panel'
   'ctrl-alt-shift-x': 'run-command:kill-last-command'
-  'ctrl-alt-r': 'run-command:re-run-last-command'
+  'alt-r': 'run-command:re-run-last-command'
 
 '.workspace':
   'ctrl-alt-shift-o': 'ide-haskell:toggle-output'
