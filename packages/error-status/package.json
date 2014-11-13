@@ -1,8 +1,8 @@
 {
   "name": "error-status",
   "main": "./lib/error-status",
-  "version": "0.1.11",
-  "description": "Show error information in the status bar instead of popping up the developer tools.",
+  "version": "0.2.0",
+  "description": "Show error messages in a panel instead of opening the developer tools. Integrates with bug-report so you can easily send error information to package developers.",
   "repository": {
     "type": "git",
     "url": "https://github.com/postcasio/error-status"
@@ -12,18 +12,21 @@
     "atom": ">=0.140.0"
   },
   "dependencies": {},
-  "readme": "# error-status\n\nShow error information in the status bar instead of popping up the developer tools.\n\nYou can double click the error count to open the developer tools and log all caught exceptions.\n",
+  "devDependencies": {
+    "atom-keymap": "^2.2.1"
+  },
+  "readme": "# error-status\n\nShow error messages in a panel instead of opening the developer tools. Integrates with bug-report so you can easily send error information to package developers.\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/postcasio/error-status/issues"
   },
   "homepage": "https://github.com/postcasio/error-status",
-  "_id": "error-status@0.1.11",
+  "_id": "error-status@0.2.0",
   "dist": {
-    "shasum": "2c3864e94915ea488f376679a660794436d404ea"
+    "shasum": "a9127e20ab900542ceea53d007f6f6df9b26c3ce"
   },
-  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114102-8044-1s85prs\\package.tgz",
-  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114102-8044-1s85prs\\package.tgz",
+  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-1141013-4352-14dbfw3\\package.tgz",
+  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-1141013-4352-14dbfw3\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],

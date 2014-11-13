@@ -17,7 +17,7 @@ class CommandRunner
     @returnCallback()
 
   processParams: ->
-    command: '/bin/bash'
+    command: 'C:\\Program Files (x86)\\Git\\bin\\bash.exe'
     args: ['-c', @addPrecedentCommand(@command)]
     options:
       cwd: atom.project.getPath()
