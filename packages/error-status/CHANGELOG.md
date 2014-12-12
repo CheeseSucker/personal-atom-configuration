@@ -1,3 +1,9 @@
+## 0.3.1
+* Use `Atom::onWillThrowError` to handle errors instead of ugly `window.onerror` hack.
+
+## 0.3.0
+* Support HTML5 Notification API.
+
 ## 0.2.0
 * bug-report integration finalised.
 * Now has specs!

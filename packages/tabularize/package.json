@@ -1,7 +1,7 @@
 {
   "name": "tabularize",
   "main": "./lib/tabularize-view",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Atom package for text alignment",
   "activationEvents": [
     "tabularize:toggle"
@@ -23,12 +23,11 @@
     "url": "https://github.com/pcasaretto/atom-tabularize/issues"
   },
   "homepage": "https://github.com/pcasaretto/atom-tabularize",
-  "_id": "tabularize@0.2.1",
+  "_id": "tabularize@0.2.2",
   "dist": {
-    "shasum": "f435f7158d9ab1bb1b9b61e922fab7a807f1a51f"
+    "shasum": "8c7c05feb7abd032305feb7b905acfb9560b01ea"
   },
-  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114101-3920-1dziqw8\\package.tgz",
-  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114101-3920-1dziqw8\\package.tgz",
+  "_from": "C:\\Users\\Hkn\\.atom\\.node-gyp\\.atom\\.apm\\tabularize\\0.2.2\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [

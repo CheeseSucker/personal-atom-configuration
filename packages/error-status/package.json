@@ -1,32 +1,32 @@
 {
   "name": "error-status",
   "main": "./lib/error-status",
-  "version": "0.2.0",
-  "description": "Show error messages in a panel instead of opening the developer tools. Integrates with bug-report so you can easily send error information to package developers.",
+  "version": "0.3.1",
+  "description": "Better error handling for Atom.",
   "repository": {
     "type": "git",
     "url": "https://github.com/postcasio/error-status"
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=0.140.0"
+    "atom": ">=0.150.0"
   },
   "dependencies": {},
   "devDependencies": {
     "atom-keymap": "^2.2.1"
   },
-  "readme": "# error-status\n\nShow error messages in a panel instead of opening the developer tools. Integrates with bug-report so you can easily send error information to package developers.\n",
+  "readme": "# error-status\n\nBetter error handling for Atom.\n\n* Keep track of all errors and log them with full stack traces.\n* Show error messages in a panel at the bottom of the workspace.\n* Show error messages in the OS X Notification Center.\n* Copy errors to your clipboard or report them directly to package developers with `bug-report` integration.\n\n![](https://github.com/postcasio/error-status/raw/master/screenshot.png)\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/postcasio/error-status/issues"
   },
   "homepage": "https://github.com/postcasio/error-status",
-  "_id": "error-status@0.2.0",
+  "_id": "error-status@0.3.1",
   "dist": {
-    "shasum": "a9127e20ab900542ceea53d007f6f6df9b26c3ce"
+    "shasum": "c3e0cde4bc1cc639a667395003807c0125b0114f"
   },
-  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-1141013-4352-14dbfw3\\package.tgz",
-  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-1141013-4352-14dbfw3\\package.tgz",
+  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114112-9556-1my5ayj\\package.tgz",
+  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114112-9556-1my5ayj\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
@@ -34,7 +34,8 @@
       ".coffee": [
         "lib\\error-status-message-view.coffee",
         "lib\\error-status-view.coffee",
-        "lib\\error-status.coffee"
+        "lib\\error-status.coffee",
+        "lib\\notifications.coffee"
       ],
       ".json": [
         "package.json"

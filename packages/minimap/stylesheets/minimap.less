@@ -1,14 +1,31 @@
 @import "ui-variables";
 
+atom-notifications:empty {
+  pointer-events: none
+}
 
 .pane.with-minimap {
-  :not(.minimap-editor):not(.mini) > .editor-contents {
-    padding-right: 10%;
-  }
-  .vertical-scrollbar {
-    right: 10%;
+  .editor, :host, atom-text-editor, atom-text-editor::shadow {
+
+    &:not(.minimap-editor):not(.mini) {
+      padding-right: 10%;
+    }
+    .vertical-scrollbar {
+      right: 0 !important;
+    }
   }
 }
+
+.zen .pane.with-minimap {
+  atom-text-editor, atom-text-editor::shadow {
+    padding-right: 0 !important;
+
+    .vertical-scrollbar {
+      right: 0 !important;
+    }
+  }
+}
+
 .minimap-quick-settings {
   position: absolute !important;
 
@@ -66,9 +83,11 @@
 
 .minimap-on-left {
   .pane.with-minimap {
-    :not(.minimap-editor):not(.mini) > .editor-contents{
-      padding-right: 0;
-      padding-left: 10%;
+    .editor, :host, atom-text-editor, atom-text-editor::shadow {
+      &:not(.minimap-editor):not(.mini) {
+        padding-right: 0;
+        padding-left: 10%;
+      }
     }
 
     .vertical-scrollbar {
@@ -76,7 +95,7 @@
     }
 
     .minimap {
-      left: 0;
+      left: 0 !important;
     }
   }
 }
@@ -84,8 +103,10 @@
 .minimap {
   position: absolute;
   right: 0;
-  width: 10%;
   bottom: 0;
+  left: initial !important;
+
+  width: 10%;
   overflow: hidden;
   box-sizing: border-box;
 

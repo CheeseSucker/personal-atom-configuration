@@ -26,7 +26,7 @@
 
 '.platform-linux, .platform-win32':
   'F5': 'build:trigger'
-  'escape': 'build:stop'
+  #  'escape': 'build:stop'
 
 '.workspace .editor':
   'ctrl-alt-shift-f': 'ide-haskell:prettify-file'

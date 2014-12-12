@@ -1,7 +1,7 @@
 {
   "name": "highlight-selected",
   "main": "./lib/highlight-selected",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Highlights the current word selected when double clicking",
   "repository": {
     "type": "git",
@@ -25,12 +25,12 @@
     "url": "https://github.com/richrace/highlight-selected/issues"
   },
   "homepage": "https://github.com/richrace/highlight-selected",
-  "_id": "highlight-selected@0.6.2",
+  "_id": "highlight-selected@0.6.3",
   "dist": {
-    "shasum": "c2cacee81493aa13cf1a87f8809d0a9033287c11"
+    "shasum": "3ed52facbfc3f9216ccea54469b7ab51715d6c69"
   },
-  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114101-8100-aveklk\\package.tgz",
-  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114101-8100-aveklk\\package.tgz",
+  "_resolved": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114112-10868-1ta4z3y\\package.tgz",
+  "_from": "C:\\Users\\Hkn\\AppData\\Local\\Temp\\d-114112-10868-1ta4z3y\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [

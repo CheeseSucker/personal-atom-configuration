@@ -2,7 +2,6 @@ ErrorStatusView = require './error-status-view'
 
 module.exports =
 	errorStatusView: null
-	previousOnError: null
 
 	config:
 		showErrorDetail:
@@ -13,15 +12,13 @@ module.exports =
 			type: 'boolean'
 			default: true
 			description: 'Close the error panel automatically when you report.'
+		useNotifications:
+			type: 'boolean'
+			default: false
+			description: 'Use Notification API. Clicking notifications will open the error panel.'
 
 	activate: ->
-		@previousOnError = window.onerror
-
-		window.onerror = ->
-			atom.lastUncaughtError = Array::slice.call(arguments)
-			atom.emit 'uncaught-error', arguments...
-			atom.emitter.emit 'did-throw-error', arguments...
-
+		# We need status-bar to be active before we can attach the view.
 		atom.packages.once 'activated', =>
 			@attach()
 
@@ -32,6 +29,5 @@ module.exports =
 
 	deactivate: ->
 		@errorStatusView.destroy()
-		window.onerror = @previousOnError
 
 	serialize: ->

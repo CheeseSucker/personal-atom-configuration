@@ -2,11 +2,12 @@
   'editor':
     'tabLength': 4
     'showIndentGuide': true
+    'fontSize': 14
+    'invisibles': {}
   'core':
     'disabledPackages': [
       'language-gfm'
       'language-go'
-      'language-less'
       'language-make'
       'language-perl'
       'language-ruby'
@@ -18,6 +19,7 @@
       'feedback'
       'tabs'
       'tree-view'
+      'archive-view'
     ]
     'themes': [
       'atom-dark-ui'
@@ -28,7 +30,6 @@
   'whitespace':
     'ensureSingleTrailingNewline': false
   'build':
-    'keepVisible': false
     'monocleHeight': 0
     'minimizedHeight': 0
   'recent-files':
@@ -50,4 +51,5 @@
     'hideVcsIgnoredFiles': false
     'hideIgnoredNames': false
     'showOnRightSide': false
-
+  'exception-reporting':
+    'userId': '947e5828-a88f-9fc3-cce2-7c2dc12dcfac'
