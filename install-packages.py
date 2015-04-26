@@ -2,5 +2,8 @@ import os
 
 # Install packages in list
 with open('packagelist.txt') as file:
-    for package in file.readlines():
-        os.system("apm install " + package)
+	lines = map(str.strip, file.readlines())
+	packages = "\" \"".join(lines)
+	cmd = "apm install \"" + packages + "\"" 
+	print(cmd)
+        os.system(cmd)
