@@ -3,4 +3,6 @@ compile-cache
 dev
 .npm
 .node-gyp
-/packages/run-command/screenshots
+/packages
+!/packages/cheesy-dark-syntax
+/.apm
