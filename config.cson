@@ -1,9 +1,8 @@
 "*":
   editor:
-    tabLength: 4
     showIndentGuide: true
-    fontSize: 14
     invisibles: {}
+    tabLength: 4
   core:
     disabledPackages: [
       "language-gfm"
@@ -12,15 +11,11 @@
       "language-perl"
       "language-ruby"
       "language-ruby-on-rails"
-      "language-sass"
       "language-toml"
       "metrics"
       "spell-check"
       "feedback"
-      "tabs"
-      "tree-view"
       "archive-view"
-      "open-last-project"
     ]
     themes: [
       "atom-dark-ui"
@@ -48,10 +43,11 @@
     hideHighlightOnSelectedWord: true
   tabs:
     showIcons: true
-  "tree-view":
-    hideVcsIgnoredFiles: false
-    hideIgnoredNames: false
-    showOnRightSide: false
-    sortFoldersBeforeFiles: true
   "exception-reporting":
     userId: "947e5828-a88f-9fc3-cce2-7c2dc12dcfac"
+  deprecated:
+    tool:
+      gulp: true
+".basic.html.text":
+  editor:
+    tabLength: 2

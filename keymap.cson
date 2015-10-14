@@ -31,22 +31,28 @@
 '.workspace .editor':
   'ctrl-alt-shift-f': 'ide-haskell:prettify-file'
   'ctrl-0': 'window:reset-font-size'
+
+  # Multiple selections
   'ctrl-shift-up': 'editor:add-selection-above'
   'ctrl-shift-down': 'editor:add-selection-below'
+  'ctrl-shift-d': 'find-and-replace:select-next'
+  'ctrl-shift-a': 'find-and-replace:select-all'
+  'ctrl-shift-L': 'editor:split-selections-into-lines'
+
   'ctrl-d': 'editor:duplicate-lines'
   'alt-down': 'editor:move-line-down'
   'alt-up': 'editor:move-line-up'
   'ctrl-up': 'editor:move-up'
   'ctrl-down': 'editor:move-down'
   'ctrl-alt-a': 'atom-alignment:align'
-  'ctrl-A': 'tabularize:toggle'
+  #'ctrl-A': 'tabularize:toggle'
   'ctrl-enter': 'find-and-replace:replace-all'
   'ctrl-h': 'find-and-replace:show'
   'ctrl-alt-shift-f': 'ide-haskell:prettify-file'
   'ctrl-r': 'run-command:run'
+  'ctrl-shift-r': 'run-command:re-run-last-command'
   'ctrl-alt-x': 'run-command:toggle-panel'
   'ctrl-alt-shift-x': 'run-command:kill-last-command'
-  'alt-r': 'run-command:re-run-last-command'
 
 '.workspace':
   'ctrl-alt-shift-o': 'ide-haskell:toggle-output'
