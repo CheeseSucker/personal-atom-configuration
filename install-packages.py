@@ -6,4 +6,4 @@ with open('packagelist.txt') as file:
 	packages = "\" \"".join(lines)
 	cmd = "apm install \"" + packages + "\"" 
 	print(cmd)
-        os.system(cmd)
+	os.system(cmd)
